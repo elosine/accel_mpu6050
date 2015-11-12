@@ -1,4 +1,4 @@
-
+ 
 // MPU-6050 Accelerometer + Gyro
 // -----------------------------
 //
@@ -953,7 +953,7 @@ void loop()
   set_last_read_angle_data(t_now, angle_x, angle_y, angle_z, unfiltered_gyro_angle_x, unfiltered_gyro_angle_y, unfiltered_gyro_angle_z);
 
   // Send the data to the serial port
-
+/*
   //Accelerometer angle X - Left/Right
   Serial.print( F("AcX:") );
   Serial.print(accel_angle_x, 2);
@@ -978,10 +978,11 @@ void loop()
   Serial.print(F("GyZ:"));
   Serial.print(angle_z, 2);
   Serial.print(";");
+  */
 
   //VELOCITY
   ct++;
-if(ct%3 == 0){
+if(ct%1 == 0){
   //Accelerometer angle X - Left/Right
   deltaAcX = accel_angle_x - pAcX; //find out amount of change per frame
   Serial.print( F("AcXv:") );
@@ -1029,7 +1030,7 @@ if(ct%3 == 0){
    */
 
   // Delay so we don't swamp the serial port
-  delay(15);
+  delay(30);
 }
 
 
