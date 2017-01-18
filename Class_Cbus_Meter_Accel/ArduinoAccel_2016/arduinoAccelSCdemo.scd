@@ -1,6 +1,6 @@
 SerialPort.listDevices;
 ( s.waitForBoot{ fork{
-	a = ArduinoSMS("/dev/ttyUSB0", 38400);
+	a = ArduinoSMS("/dev/tty.wchusbserial1a130", 38400);
 	k = {Bus.control(s)}!3;
 	~xmap = 60.0;
 	5.wait;
